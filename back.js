@@ -16,7 +16,9 @@ function iniciando_cronometro() {
     botao_pausar.onclick = function(){
         pausando(botao_reiniciar)
     }
-
+    botao_reiniciar.onclick = function() {
+        reiniciar(botao_pausar, botao_reiniciar)
+    }
     cronometros()
 
 }
@@ -56,7 +58,7 @@ function pausando(botao_reiniciar) {
 
 }
 
-function reiniciar() {
+function reiniciar(botao_pausar, botao_reiniciar) {
     clearInterval(cronometro)
     document.getElementById("minuto").innerHTML = "00"
     document.getElementById("segundo").innerHTML = "00"
@@ -64,5 +66,8 @@ function reiniciar() {
     segundo = 0
     minuto = 0
     hora = 0
+    botao_pausar.remove()
+    botao_reiniciar.remove()
+
 
 }
