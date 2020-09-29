@@ -8,14 +8,17 @@
 </head>
 <body>
     <div class="principal">
-        <h1> Cronometro Básico </h1>
-        <div>
-            <strong id="hora">hora</strong>
-            <strong id="minuto">minuto</strong>
-            <strong id="segundo">segundo</strong><br>
+        <h1 style="color: white"> Cronômetro </h1>
+        <div class="tempo">
+            <strong id="hora">00 :</strong>
+            <strong id="minuto">00</strong>
+            <strong id="segundo">: 00</strong><br>
         </div>
+        <br>
         <div id="principal">
-            <button onclick="iniciando_cronometro(primeira_vez=true)"> Iniciar Cronometro </button>
+            <button id='botao_inicial' onclick="iniciando_cronometro(primeira_vez=true)">
+                <strong>Iniciar</strong>
+            </button>
         </div>
         <div id="pausar">
 

@@ -1,12 +1,33 @@
 body {
-    background: black;
+    background: linear-gradient(90deg, black 5%, red 35%, black 100%);
 }
 
 .principal {
     text-align: center;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 10%;
     width: 75%;
     height: 200px;
-    background: white;
+}
+
+.tempo {
+    color: white;
+}
+
+#botao_inicial {
+    border: white solid 2px;
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius: 100px;
+}
+
+#botao_inicial strong {
+    color: white;
+    font-size: 20px;
+}
+
+
+.principal h1 {
+    font-size: 50px;
 }
