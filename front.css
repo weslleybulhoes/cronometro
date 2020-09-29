@@ -1,0 +1,12 @@
+body {
+    background: black;
+}
+
+.principal {
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 75%;
+    height: 200px;
+    background: white;
+}
