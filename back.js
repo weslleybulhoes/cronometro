@@ -1,5 +1,5 @@
-var segundo = 0
-var minuto = 0
+var segundo = 55
+var minuto = 58
 var hora = 0
 var cronometro;
 var decimo = 0
@@ -34,22 +34,25 @@ function cronometros() {
                 case 10:
                     decimo = 0
                     segundo = segundo + 1
-                    document.getElementById("segundo").innerHTML = segundo
+                    melhorando_formatacao(segundo, "segundo")
+
             }
             switch (segundo) {
                 case 60:
                     segundo = 0
                     minuto = minuto + 1
-                    document.getElementById("minuto").innerHTML = minuto
+                    melhorando_formatacao(segundo, "segundo")
+                    melhorando_formatacao(minuto, "minuto")
             }
             switch (minuto) {
                 case 60:
                     minuto = 0
                     hora = hora + 1
-                    document.getElementById("hora").innerHTML = hora
+                    melhorando_formatacao(minuto, "minuto")
+                    melhorando_formatacao(hora, "hora")
                 }
             }, 100)
-    }
+        }
 
 function pausando(botao_reiniciar) {
     document.getElementById("pausando").remove()
@@ -68,12 +71,14 @@ function pausando(botao_reiniciar) {
     }
 }
 
-
 function reiniciar(botao_pausar, botao_reiniciar) {
     clearInterval(cronometro)
-    document.getElementById("minuto").innerHTML = "00"
+    document.getElementById("minuto").innerHTML = "00 "
     document.getElementById("segundo").innerHTML = "00"
-    document.getElementById("hora").innerHTML = "00"
+    document.getElementById("hora").innerHTML = "00 "
+    document.getElementById("decimo").innerHTML = "00"
+
+    decimo = 0
     segundo = 0
     minuto = 0
     hora = 0
@@ -87,6 +92,17 @@ function reiniciar(botao_pausar, botao_reiniciar) {
     botao_iniciar.onclick = function(){
         iniciando_cronometro(botao_iniciar)
     }
+}
+
+function melhorando_formatacao(tempo, id) {
+    if (tempo<=9) {
+        document.getElementById(id).innerHTML =
+            ": 0"+tempo
+        }
+    else if (tempo>9) {
+        document.getElementById(id).innerHTML =
+            ": "+tempo
+        }
 }
 
 
