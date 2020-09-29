@@ -3,8 +3,10 @@ var minuto = 0
 var hora = 0
 var cronometro;
 
-function iniciando_cronometro() {
+function iniciando_cronometro(botao_iniciar) {
+
     document.getElementById("principal").remove()
+
     var botao_pausar = document.createElement("button")
     botao_pausar.innerHTML = "Pausar"
     var botao_reiniciar = document.createElement("button")
@@ -68,6 +70,14 @@ function reiniciar(botao_pausar, botao_reiniciar) {
     hora = 0
     botao_pausar.remove()
     botao_reiniciar.remove()
+    var botao_iniciar = document.createElement("button")
+    botao_iniciar.innerHTML = "Iniciar Cronometro"
+    botao_iniciar.id = "principal"
+    document.getElementById("pausar").appendChild(botao_iniciar)
+    
+    botao_iniciar.onclick = function(){
+        iniciando_cronometro(botao_iniciar)
+    }
 
 
 }
