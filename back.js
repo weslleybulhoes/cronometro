@@ -2,6 +2,7 @@ var segundo = 0
 var minuto = 0
 var hora = 0
 var cronometro;
+var decimo = 0
 
 function iniciando_cronometro(botao_iniciar) {
 
@@ -27,8 +28,14 @@ function iniciando_cronometro(botao_iniciar) {
 
 function cronometros() {
         cronometro = setInterval(function () {
-            segundo = segundo + 1
-            document.getElementById("segundo").innerHTML = segundo
+            document.getElementById("decimo").innerHTML = decimo
+            decimo = decimo + 1
+            switch (decimo) {
+                case 10:
+                    decimo = 0
+                    segundo = segundo + 1
+                    document.getElementById("segundo").innerHTML = segundo
+            }
             switch (segundo) {
                 case 60:
                     segundo = 0
@@ -41,7 +48,7 @@ function cronometros() {
                     hora = hora + 1
                     document.getElementById("hora").innerHTML = hora
                 }
-            }, 1000)
+            }, 100)
     }
 
 function pausando(botao_reiniciar) {

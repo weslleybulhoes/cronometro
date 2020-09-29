@@ -8,7 +8,6 @@ body {
     margin-top: 10%;
     width: 75%;
 
-
 }
 
 .tempo {
@@ -42,4 +41,12 @@ body {
     -webkit-text-stroke-color: #000;
     margin: 0;
     font-size: 75px; color: #fffdd9;
+}
+
+#decimo {
+    margin-left: 235px;
+    position: relative;
+    bottom: 16px;
+    color: white;
+    font-size: 20px;
 }
