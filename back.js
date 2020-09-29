@@ -31,7 +31,7 @@ function cronometros() {
             document.getElementById("segundo").innerHTML = segundo
             switch (segundo) {
                 case 60:
-                    milesimo = 0
+                    segundo = 0
                     minuto = minuto + 1
                     document.getElementById("minuto").innerHTML = minuto
             }
@@ -59,8 +59,8 @@ function pausando(botao_reiniciar) {
         reiniciar(botao_reiniciar, iniciar)
 
     }
-
 }
+
 
 function reiniciar(botao_pausar, botao_reiniciar) {
     clearInterval(cronometro)
@@ -80,6 +80,7 @@ function reiniciar(botao_pausar, botao_reiniciar) {
     botao_iniciar.onclick = function(){
         iniciando_cronometro(botao_iniciar)
     }
-
 }
+
+
 
