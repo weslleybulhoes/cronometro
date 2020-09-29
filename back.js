@@ -3,6 +3,25 @@ var minuto = 0
 var hora = 0
 var cronometro;
 
+function iniciando_cronometro() {
+    document.getElementById("principal").remove()
+    var botao_pausar = document.createElement("button")
+    botao_pausar.innerHTML = "Pausar"
+    var botao_reiniciar = document.createElement("button")
+    botao_reiniciar.innerHTML = "Reiniciar"
+    document.getElementById("pausar").appendChild(botao_pausar)
+    document.getElementById("pausar").appendChild(botao_reiniciar)
+    botao_pausar.id = "pausando"
+
+    botao_pausar.onclick = function(){
+        pausando()
+    }
+
+    cronometros()
+
+}
+
+
 function cronometros() {
         cronometro = setInterval(function () {
             segundo = segundo + 1
@@ -23,7 +42,15 @@ function cronometros() {
     }
 
 function pausando() {
+    document.getElementById("pausando").remove()
     clearInterval(cronometro)
+    var iniciar = document.createElement("button")
+    iniciar.innerHTML = "Iniciar"
+    iniciar.id = "principal"
+    document.getElementById("pausar").appendChild(iniciar)
+    iniciar.onclick = function () {
+        iniciando_cronometro()
+    }
 
 }
 
