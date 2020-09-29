@@ -7,12 +7,21 @@ body {
     margin-left: 10%;
     margin-top: 10%;
     width: 75%;
-    height: 200px;
+
+
 }
 
 .tempo {
     color: white;
 }
+
+.tempo strong {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-size: 50px;
+}
+
+
 
 #botao_inicial {
     border: white solid 2px;
@@ -29,5 +38,8 @@ body {
 
 
 .principal h1 {
-    font-size: 50px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    margin: 0;
+    font-size: 75px; color: #fffdd9;
 }
