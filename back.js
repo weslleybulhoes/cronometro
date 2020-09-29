@@ -14,7 +14,7 @@ function iniciando_cronometro() {
     botao_pausar.id = "pausando"
 
     botao_pausar.onclick = function(){
-        pausando()
+        pausando(botao_reiniciar)
     }
 
     cronometros()
@@ -41,7 +41,7 @@ function cronometros() {
             }, 1000)
     }
 
-function pausando() {
+function pausando(botao_reiniciar) {
     document.getElementById("pausando").remove()
     clearInterval(cronometro)
     var iniciar = document.createElement("button")
@@ -50,6 +50,8 @@ function pausando() {
     document.getElementById("pausar").appendChild(iniciar)
     iniciar.onclick = function () {
         iniciando_cronometro()
+        botao_reiniciar.remove()
+
     }
 
 }
