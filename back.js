@@ -25,7 +25,6 @@ function iniciando_cronometro(botao_iniciar) {
 
 }
 
-
 function cronometros() {
         cronometro = setInterval(function () {
             segundo = segundo + 1
@@ -53,8 +52,11 @@ function pausando(botao_reiniciar) {
     iniciar.id = "principal"
     document.getElementById("pausar").appendChild(iniciar)
     iniciar.onclick = function () {
-        iniciando_cronometro()
         botao_reiniciar.remove()
+        iniciando_cronometro()
+    }
+    botao_reiniciar.onclick = function () {
+        reiniciar(botao_reiniciar, iniciar)
 
     }
 
@@ -74,10 +76,10 @@ function reiniciar(botao_pausar, botao_reiniciar) {
     botao_iniciar.innerHTML = "Iniciar Cronometro"
     botao_iniciar.id = "principal"
     document.getElementById("pausar").appendChild(botao_iniciar)
-    
+
     botao_iniciar.onclick = function(){
         iniciando_cronometro(botao_iniciar)
     }
 
-
 }
+
