@@ -85,7 +85,7 @@ function reiniciar(botao_pausar, botao_reiniciar) {
     botao_pausar.remove()
     botao_reiniciar.remove()
     var botao_iniciar = document.createElement("button")
-    botao_iniciar.innerHTML = "Iniciar Cronometro"
+    botao_iniciar.innerHTML = "Iniciar"
     botao_iniciar.id = "principal"
     document.getElementById("pausar").appendChild(botao_iniciar)
 

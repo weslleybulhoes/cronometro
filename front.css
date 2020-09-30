@@ -51,10 +51,27 @@ body {
     font-size: 20px;
 }
 
-#pausar button{
+.manipulando_botoes button {
     border: white solid 2px;
     width: 100px;
     height: 100px;
     background: black;
     border-radius: 100px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.manipulando_botoes button:hover {
+    border: black solid 2px;
+    background: white;
+    color: black;
+    font-weight: bolder
+}
+
+.manipulando_botoes button:active {
+    border: white solid 2px;
+    background: black;
+    color: white;
+    font-weight: bolder
 }
