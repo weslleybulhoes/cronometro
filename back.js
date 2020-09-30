@@ -1,5 +1,5 @@
-var segundo = 55
-var minuto = 58
+var segundo = 0
+var minuto = 0
 var hora = 0
 var cronometro;
 var decimo = 0
@@ -95,14 +95,17 @@ function reiniciar(botao_pausar, botao_reiniciar) {
 }
 
 function melhorando_formatacao(tempo, id) {
-    if (tempo<=9) {
+    if (tempo<=9 && id!="hora") {
         document.getElementById(id).innerHTML =
             ": 0"+tempo
         }
-    else if (tempo>9) {
+    else if (tempo>9 && id!="hora") {
         document.getElementById(id).innerHTML =
             ": "+tempo
         }
+    if (id=="hora") {
+        document.getElementById(id).innerHTML = "0"+hora
+    }
 }
 
 

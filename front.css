@@ -50,3 +50,11 @@ body {
     color: white;
     font-size: 20px;
 }
+
+#pausar button{
+    border: white solid 2px;
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius: 100px;
+}
